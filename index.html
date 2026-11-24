@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Zubair Alvi — Frontend Developer and founder of a Job Application Service based in Rahim Yar Khan, Punjab, Pakistan. HTML, CSS, JavaScript, responsive web design." />
+<meta property="og:title" content="Zubair Alvi — Frontend Developer" />
+<meta property="og:description" content="Clean, responsive websites with HTML, CSS and JavaScript. 100,000+ job applications submitted for clients worldwide." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c93a14'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EZA%3C/text%3E%3C/svg%3E" />
+<title>Zubair Alvi — Frontend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#f6f6f2;
+    --bg-soft:#edede7;
+    --surface:#ffffff;
+    --surface-2:#f1f0ea;
+    --ink:#10151d;
+    --ink-2:#27303d;
+    --muted:#55606d;
+    --muted-2:#7b8694;
+    --line:#deddd3;
+    --line-strong:#c9c8bc;
+    --accent:#c93a14;
+    --accent-dark:#a82f0f;
+    --accent-ink:#ffffff;
+    --accent-soft:#fbeae3;
+    --teal:#0b7263;
+    --teal-soft:#e0f1ed;
+    --amber:#9c6d14;
+    --amber-soft:#f7edd3;
+    --nav-bg:rgba(246,246,242,.9);
+    --hero-bg:#10151d;
+    --hero-panel:#171e28;
+    --hero-line:#28323f;
+    --hero-ink:#f4f5f0;
+    --hero-muted:#a9b3bf;
+    --code-bg:#0a0e13;
+    --shadow-sm:0 1px 2px rgba(16,21,29,.05),0 4px 14px rgba(16,21,29,.05);
+    --shadow:0 2px 4px rgba(16,21,29,.05),0 16px 38px rgba(16,21,29,.09);
+    --shadow-lg:0 4px 8px rgba(16,21,29,.06),0 28px 56px rgba(16,21,29,.13);
+    --radius:16px;
+    --radius-sm:10px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b0f14;
+      --bg-soft:#0f141b;
+      --surface:#141a22;
+      --surface-2:#1a212c;
+      --ink:#eef1f4;
+      --ink-2:#cfd7df;
+      --muted:#98a3af;
+      --muted-2:#76828f;
+      --line:#232d39;
+      --line-strong:#314051;
+      --accent:#ff7a4a;
+      --accent-dark:#ff7a4a;
+      --accent-ink:#1c0f08;
+      --accent-soft:#2d1a11;
+      --teal:#43c9b4;
+      --teal-soft:#102925;
+      --amber:#e3b356;
+      --amber-soft:#2a2210;
+      --nav-bg:rgba(11,15,20,.9);
+      --hero-bg:#07090d;
+      --hero-panel:#10161e;
+      --hero-line:#232e3b;
+      --hero-ink:#f4f5f0;
+      --hero-muted:#98a3af;
+      --code-bg:#05070a;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
+      --shadow:0 2px 4px rgba(0,0,0,.3),0 16px 38px rgba(0,0,0,.4);
+      --shadow-lg:0 4px 8px rgba(0,0,0,.35),0 28px 56px rgba(0,0,0,.5);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  ::selection{background:var(--accent);color:#fff}
+  h1,h2,h3{font-family:"Sora",sans-serif;line-height:1.16;margin:0;letter-spacing:-.015em;text-wrap:balance}
+  p{margin:0}
+  a{color:inherit}
+  img,svg{display:inline-block;vertical-align:middle}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .mono{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  section{padding:88px 0}
+  @media (max-width:640px){section{padding:64px 0}.wrap{padding:0 18px}}
+
+  /* section headers */
+  .sec-head{max-width:700px;margin-bottom:42px}
+  .sec-label{display:flex;align-items:center;gap:12px;font-family:"JetBrains Mono",monospace;font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  .sec-label::after{content:"";height:1px;width:52px;background:var(--line-strong)}
+  .sec-head h2{font-size:clamp(1.75rem,4vw,2.45rem);font-weight:700;margin-bottom:12px}
+  .sec-head p{color:var(--muted);font-size:1.05rem;max-width:38rem}
+
+  /* ---------- Nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:60;background:var(--nav-bg);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s;
+  }
+  header.nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(16,21,29,.06)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+  .brand{font-family:"Sora",sans-serif;font-weight:700;font-size:1.1rem;text-decoration:none;display:flex;align-items:center;gap:11px;line-height:1.15}
+  .brand .dot{width:38px;height:38px;border-radius:10px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:"JetBrains Mono",monospace;font-size:.8rem;font-weight:700;flex:none;letter-spacing:.02em}
+  .brand small{display:block;font-family:"Manrope",sans-serif;font-weight:600;font-size:.7rem;color:var(--muted);letter-spacing:.09em;text-transform:uppercase;margin-top:2px}
+  nav.links{display:flex;gap:2px;align-items:center}
+  nav.links a{text-decoration:none;font-weight:600;font-size:.92rem;padding:8px 13px;border-radius:8px;color:var(--ink-2);transition:background .18s,color .18s;position:relative}
+  nav.links a:hover{background:var(--surface-2);color:var(--ink)}
+  nav.links a.active{color:var(--accent)}
+  nav.links a.cta{background:var(--accent);color:var(--accent-ink);margin-left:10px;font-weight:700;padding:10px 18px;border-radius:9px;box-shadow:var(--shadow-sm)}
+  nav.links a.cta:hover{background:var(--accent-dark);color:var(--accent-ink)}
+  .burger{display:none;background:var(--surface);border:1px solid var(--line);border-radius:9px;width:42px;height:42px;cursor:pointer;padding:11px;flex-direction:column;justify-content:center;gap:5px}
+  .burger span{display:block;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .25s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  @media (max-width:860px){
+    .burger{display:flex}
+    nav.links{
+      display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);
+      border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;
+      padding:10px 20px 16px;gap:2px;box-shadow:var(--shadow);
+    }
+    nav.links.open{display:flex}
+    nav.links a{padding:12px 10px}
+    nav.links a.cta{margin:8px 0 0;text-align:center}
+    .nav-in{position:relative}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{background:var(--hero-bg);color:var(--hero-ink);padding:80px 0 0;overflow:hidden;position:relative}
+  .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:56px 56px;pointer-events:none;mask-image:linear-gradient(to bottom,black 55%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 55%,transparent 100%)}
+  .hero .wrap{position:relative}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:48px;align-items:center}
+  @media (max-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+  .avail{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--hero-line);border-radius:999px;padding:7px 15px 7px 10px;font-size:.83rem;font-weight:600;color:var(--hero-ink);margin-bottom:24px;background:var(--hero-panel)}
+  .avail i{width:8px;height:8px;border-radius:50%;background:#34d399;flex:none;animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.45)}70%{box-shadow:0 0 0 8px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+  .hero h1{font-size:clamp(2.6rem,6.5vw,4.1rem);font-weight:800;margin-bottom:10px}
+  .hero h1 .accent{color:#ff7a4a}
+  .hero .role{font-family:"JetBrains Mono",monospace;font-size:clamp(.92rem,2.4vw,1.08rem);font-weight:600;color:#ffb59d;margin-bottom:22px;letter-spacing:.01em}
+  .hero .lede{color:var(--hero-muted);font-size:1.09rem;line-height:1.7;max-width:34rem;margin-bottom:30px}
+  .hero .lede strong{color:var(--hero-ink);font-weight:700}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:700;font-size:.96rem;padding:13px 24px;border-radius:10px;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .18s,box-shadow .18s,background .18s,border-color .18s,opacity .18s}
+  .btn:active{transform:translateY(1px)}
+  .btn-accent{background:var(--accent);color:var(--accent-ink);box-shadow:0 8px 22px rgba(201,58,20,.28)}
+  @media (prefers-color-scheme: dark){.btn-accent{box-shadow:0 8px 22px rgba(255,122,74,.18)}}
+  .btn-accent:hover{background:var(--accent-dark)}
+  .btn-ghost{background:transparent;color:var(--hero-ink);border-color:#3a4552}
+  .btn-ghost:hover{border-color:#5d6b7a;background:rgba(255,255,255,.04)}
+  .btn-dark{background:var(--ink);color:var(--bg)}
+  .btn-dark:hover{opacity:.88}
+  .btn-outline{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+  .btn-outline:hover{border-color:var(--muted);background:var(--surface-2)}
+  .hero-meta{display:flex;gap:10px 22px;flex-wrap:wrap;font-size:.88rem;color:var(--hero-muted);font-weight:600}
+  .hero-meta span{display:inline-flex;align-items:center;gap:7px}
+  .hero-meta svg{flex:none;opacity:.85}
+
+  /* code card */
+  .codecard{background:var(--code-bg);border:1px solid #26313f;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45);min-width:0}
+  .codecard .bar{display:flex;align-items:center;gap:7px;padding:12px 15px;border-bottom:1px solid #1b2430;background:rgba(255,255,255,.015)}
+  .codecard .bar i{width:11px;height:11px;border-radius:50%}
+  .codecard .bar .f{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:#8492a3;margin-left:8px}
+  .codecard .bar .live{margin-left:auto;font-family:"JetBrains Mono",monospace;font-size:.68rem;font-weight:700;letter-spacing:.08em;color:#34d399;display:inline-flex;align-items:center;gap:6px}
+  .codecard .bar .live::before{content:"";width:6px;height:6px;border-radius:50%;background:#34d399}
+  .codecard pre{margin:0;padding:20px 20px 8px;font-family:"JetBrains Mono",monospace;font-size:.82rem;line-height:1.78;color:#c9d4e0;overflow-x:auto}
+  .codecard .foot{padding:12px 20px 16px;border-top:1px solid #1b2430;margin-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:"JetBrains Mono",monospace;font-size:.72rem;color:#8492a3}
+  .codecard .foot b{color:#e8edf2;font-weight:600}
+  .tk-k{color:#ff9d7e}.tk-s{color:#a5d6a7}.tk-f{color:#8ecae6}.tk-c{color:#5f6d7c}.tk-p{color:#e6c07a}
+
+  .stats{border-top:1px solid var(--hero-line);margin-top:60px}
+  .stats-in{display:grid;grid-template-columns:repeat(4,1fr)}
+  @media (max-width:840px){.stats-in{grid-template-columns:repeat(2,1fr)}}
+  .stat{padding:26px 24px;border-left:1px solid var(--hero-line)}
+  .stat:first-child{border-left:none;padding-left:0}
+  @media (max-width:840px){.stat{padding-left:18px}.stat:nth-child(odd){border-left:none;padding-left:0}.stat:nth-child(n+3){border-top:1px solid var(--hero-line)}}
+  .stat .num{font-family:"Sora",sans-serif;font-size:clamp(1.55rem,3.4vw,2.05rem);font-weight:700;color:#fff;letter-spacing:-.02em}
+  .stat .num em{font-style:normal;color:#ff7a4a}
+  .stat .lbl{font-size:.85rem;color:var(--hero-muted);font-weight:600;margin-top:3px;line-height:1.45}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:44px;align-items:start}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+  .about-grid .body p{color:var(--muted);margin-bottom:17px;font-size:1.04rem;line-height:1.75}
+  .about-grid .body p strong{color:var(--ink);font-weight:700}
+  .about-grid .body p:first-child{font-size:1.12rem;color:var(--ink-2)}
+  .about-grid .body p:first-child strong{color:var(--ink)}
+  .factcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm);position:sticky;top:96px}
+  @media (max-width:900px){.factcard{position:static}}
+  .factcard h3{font-size:.82rem;font-family:"JetBrains Mono",monospace;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+  .factcard dl{margin:0;display:grid;gap:0}
+  .factcard .row{display:flex;justify-content:space-between;gap:16px;font-size:.93rem;border-bottom:1px solid var(--line);padding:11px 0}
+  .factcard .row:first-child{padding-top:0}
+  .factcard .row:last-child{border-bottom:none;padding-bottom:0}
+  .factcard dt{color:var(--muted);font-weight:600;flex:none}
+  .factcard dd{margin:0;font-weight:700;text-align:right}
+  .factcard dd a{color:var(--accent);text-decoration:none}
+  .factcard dd a:hover{text-decoration:underline}
+
+  /* ---------- Skills ---------- */
+  #skills{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .skill-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:900px){.skill-cols{grid-template-columns:1fr}}
+  .skill-col{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm);transition:box-shadow .22s,transform .22s,border-color .22s}
+  .skill-col:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--line-strong)}
+  .skill-col .tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:999px;margin-bottom:15px}
+  .tag-core{background:var(--teal-soft);color:var(--teal)}
+  .tag-build{background:var(--accent-soft);color:var(--accent)}
+  .tag-learn{background:var(--amber-soft);color:var(--amber)}
+  .skill-col h3{font-size:1.1rem;margin-bottom:7px}
+  .skill-col>p{color:var(--muted);font-size:.93rem;margin-bottom:17px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:.86rem;font-weight:600;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 11px}
+  .skill-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  .skill-list li{display:flex;gap:10px;font-size:.95rem;font-weight:600;align-items:flex-start;line-height:1.5}
+  .skill-list li svg{flex:none;margin-top:4px}
+
+  /* ---------- Services ---------- */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:900px){.svc-grid{grid-template-columns:1fr}}
+  .svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:box-shadow .22s,transform .22s,border-color .22s}
+  .svc:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--line-strong)}
+  .svc .num{font-family:"JetBrains Mono",monospace;font-size:.78rem;font-weight:700;color:var(--accent);letter-spacing:.1em;margin-bottom:16px}
+  .svc h3{font-size:1.16rem;margin-bottom:9px}
+  .svc>p{color:var(--muted);font-size:.95rem;margin-bottom:17px}
+  .svc ul{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:9px}
+  .svc ul li{display:flex;gap:9px;font-size:.9rem;font-weight:600;align-items:flex-start;line-height:1.5}
+  .svc ul li svg{flex:none;margin-top:3px}
+  .svc .go{margin-top:auto;font-weight:700;font-size:.92rem;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:7px}
+  .svc .go:hover{gap:11px}
+  .svc .go{transition:gap .18s}
+
+  /* process */
+  .process{margin-top:20px;background:var(--ink);color:var(--bg);border-radius:var(--radius);padding:30px 30px 26px;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+  @media (prefers-color-scheme: dark){.process{background:var(--surface);border:1px solid var(--line)}}
+  @media (max-width:900px){.process{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.process{grid-template-columns:1fr}}
+  .step .n{font-family:"JetBrains Mono",monospace;font-size:.76rem;font-weight:700;color:#ff7a4a;letter-spacing:.12em;display:block;margin-bottom:9px}
+  .step h4{font-family:"Sora",sans-serif;font-size:1rem;margin:0 0 6px;font-weight:700}
+  .step p{font-size:.88rem;line-height:1.55;opacity:.75}
+
+  /* ---------- Projects ---------- */
+  #projects{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
+  .filters button{font-family:inherit;font-weight:600;font-size:.88rem;padding:9px 17px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer;transition:all .18s}
+  .filters button:hover{border-color:var(--muted);color:var(--ink)}
+  .filters button.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .featured{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-bottom:20px}
+  .featured>*{min-width:0}
+  @media (max-width:900px){.featured{grid-template-columns:minmax(0,1fr)}}
+  .featured .txt{padding:34px}
+  @media (max-width:640px){.featured .txt{padding:26px 22px}}
+  .badge{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--accent-soft);color:var(--accent);padding:6px 12px;border-radius:999px;margin-bottom:15px}
+  .featured h3{font-size:1.55rem;margin-bottom:11px}
+  .featured .txt>p{color:var(--muted);margin-bottom:19px;line-height:1.7}
+  .feat-list{list-style:none;margin:0 0 21px;padding:0;display:grid;gap:10px}
+  .feat-list li{display:flex;gap:10px;font-size:.95rem;font-weight:600;align-items:flex-start;line-height:1.55}
+  .feat-list li svg{flex:none;margin-top:4px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}
+  .tags span{font-family:"JetBrains Mono",monospace;font-size:.73rem;font-weight:600;background:var(--surface-2);border:1px solid var(--line);padding:4px 9px;border-radius:6px;color:var(--ink-2)}
+
+  .mock{background:var(--surface-2);border-left:1px solid var(--line);padding:28px;display:flex;align-items:center;min-width:0}
+  @media (max-width:900px){.mock{border-left:none;border-top:1px solid var(--line)}}
+  .browser{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;width:100%;box-shadow:var(--shadow);min-width:0}
+  .browser .bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+  .browser .bar i{width:9px;height:9px;border-radius:50%;background:var(--line-strong);flex:none}
+  .browser .bar .url{font-family:"JetBrains Mono",monospace;font-size:.68rem;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:3px 9px;margin-left:6px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+  .browser .view{padding:17px}
+  .skl{border-radius:5px;background:var(--surface-2)}
+  .mini-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+  .mini-logo{width:74px;height:14px;border-radius:4px;background:var(--ink)}
+  .mini-links{display:flex;gap:6px}
+  .mini-links i{width:26px;height:8px;border-radius:4px;background:var(--line)}
+  .mini-h{width:78%;height:17px;background:var(--ink);margin-bottom:8px}
+  .mini-h2{width:52%;height:17px;background:var(--accent);margin-bottom:12px}
+  .mini-p{width:92%;height:9px;margin-bottom:6px}
+  .mini-p2{width:70%;height:9px;margin-bottom:14px}
+  .mini-btns{display:flex;gap:8px;margin-bottom:16px}
+  .mini-btn{width:82px;height:24px;border-radius:6px;background:var(--accent)}
+  .mini-btn.ghost{background:transparent;border:1.5px solid var(--line)}
+  .mini-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .mini-card{border:1px solid var(--line);border-radius:8px;padding:9px}
+  .mini-card i{display:block;width:20px;height:20px;border-radius:6px;background:var(--teal-soft);margin-bottom:7px}
+  .mini-card b{display:block;height:8px;border-radius:4px;background:var(--surface-2);margin-bottom:5px}
+  .mini-card s{display:block;height:7px;width:70%;border-radius:4px;background:var(--surface-2);text-decoration:none}
+
+  .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media (max-width:900px){.proj-grid{grid-template-columns:1fr}}
+  .proj{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:27px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:box-shadow .22s,transform .22s,border-color .22s}
+  .proj:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--line-strong)}
+  .proj.hide,.featured.hide{display:none}
+  .proj .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}
+  .proj .ic{width:45px;height:45px;border-radius:11px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+  .proj .ic.teal{background:var(--teal-soft);color:var(--teal)}
+  .proj .ic.amber{background:var(--amber-soft);color:var(--amber)}
+  .proj .kind{font-family:"JetBrains Mono",monospace;font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+  .proj h3{font-size:1.18rem;margin-bottom:9px}
+  .proj>p{color:var(--muted);font-size:.95rem;margin-bottom:17px;line-height:1.65}
+  .proj ul{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:9px}
+  .proj ul li{display:flex;gap:9px;font-size:.9rem;font-weight:600;align-items:flex-start;line-height:1.5}
+  .proj ul li svg{flex:none;margin-top:3px}
+  .proj .tags{margin-top:auto;margin-bottom:0}
+  .proj .demo-link{color:var(--accent);font-weight:700;text-decoration:none}
+  .proj .demo-link:hover{text-decoration:underline}
+
+  /* ---------- Demo ---------- */
+  .demo-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+  .demo-head{padding:26px 28px 0}
+  .demo-head h3{font-size:1.25rem;margin-bottom:6px}
+  .demo-head p{color:var(--muted);font-size:.95rem;max-width:40rem}
+  .demo-body{padding:22px 28px 28px}
+  @media (max-width:640px){.demo-head{padding:22px 20px 0}.demo-body{padding:18px 20px 22px}}
+  .demo-form{display:grid;grid-template-columns:1.4fr 1fr auto;gap:10px;margin-bottom:16px}
+  @media (max-width:700px){.demo-form{grid-template-columns:1fr}}
+  .demo-form input,.demo-form select,.field input,.field textarea,.field select{
+    font-family:inherit;font-size:.95rem;padding:12px 14px;border-radius:9px;
+    border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%;
+    transition:border-color .18s,box-shadow .18s;
+  }
+  .demo-form input:focus,.demo-form select:focus,.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .demo-filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+  .demo-filters button{font-family:inherit;font-weight:600;font-size:.84rem;padding:7px 15px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer;transition:all .18s}
+  .demo-filters button:hover{border-color:var(--muted)}
+  .demo-filters button.active{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .demo-filters .count{margin-left:auto;font-size:.86rem;color:var(--muted);font-weight:700;font-family:"JetBrains Mono",monospace}
+  .job-rows{display:grid;gap:9px;grid-template-columns:minmax(0,1fr)}
+  .job-row{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:11px;padding:12px 14px;background:var(--surface);min-width:0;transition:border-color .18s}
+  .job-row:hover{border-color:var(--line-strong)}
+  .job-row select{min-width:0}
+  .job-row .jt{flex:1;min-width:0}
+  .job-row .jt b{display:block;font-size:.96rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .job-row .jt span{font-size:.83rem;color:var(--muted);font-weight:600}
+  .pill{font-size:.73rem;font-weight:800;padding:4px 10px;border-radius:999px;flex:none;letter-spacing:.02em}
+  .pill.applied{background:var(--teal-soft);color:var(--teal)}
+  .pill.interview{background:var(--amber-soft);color:var(--amber)}
+  .pill.rejected{background:var(--accent-soft);color:var(--accent)}
+  .del{background:none;border:1px solid var(--line);border-radius:8px;width:32px;height:32px;cursor:pointer;color:var(--muted);font-size:1.05rem;line-height:1;flex:none;transition:all .18s}
+  .del:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+  .empty{border:1.5px dashed var(--line-strong);border-radius:11px;padding:24px;text-align:center;color:var(--muted);font-weight:600;font-size:.93rem}
+  .demo-note{font-size:.82rem;color:var(--muted-2);margin-top:15px}
+  @media (max-width:560px){.job-row .pill{display:none}.job-row{gap:8px;padding:10px}.job-row select{max-width:118px}}
+
+  /* ---------- Experience ---------- */
+  #experience{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .timeline{display:grid;gap:0;max-width:860px;position:relative}
+  .timeline::before{content:"";position:absolute;left:196px;top:8px;bottom:8px;width:1px;background:var(--line-strong)}
+  @media (max-width:720px){.timeline::before{display:none}}
+  .t-item{display:grid;grid-template-columns:170px 1fr;gap:26px;padding:28px 0;border-bottom:1px solid var(--line);position:relative}
+  .t-item:first-child{padding-top:2px}
+  .t-item:last-child{border-bottom:none;padding-bottom:0}
+  .t-item::after{content:"";position:absolute;left:191px;top:36px;width:11px;height:11px;border-radius:50%;background:var(--bg-soft);border:2.5px solid var(--accent)}
+  .t-item:first-child::after{top:10px}
+  @media (max-width:720px){.t-item{grid-template-columns:1fr;gap:7px}.t-item::after{display:none}}
+  .t-when{font-family:"JetBrains Mono",monospace;font-size:.78rem;font-weight:700;color:var(--accent);padding-top:5px;letter-spacing:.05em}
+  @media (max-width:720px){.t-when{padding-top:0}}
+  .t-item h3{font-size:1.15rem;margin-bottom:4px}
+  .t-item .org{font-weight:700;color:var(--muted);font-size:.92rem;margin-bottom:10px}
+  .t-item p{color:var(--muted);font-size:.97rem;line-height:1.7}
+  .countries{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+  .countries span{font-size:.82rem;font-weight:600;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px}
+
+  /* ---------- Reviews ---------- */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:900px){.rev-grid{grid-template-columns:1fr}}
+  .rev{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:27px;display:flex;flex-direction:column;gap:15px;box-shadow:var(--shadow-sm);transition:box-shadow .22s,transform .22s,border-color .22s}
+  .rev:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--line-strong)}
+  .rev .q{font-family:"Sora",sans-serif;font-size:2rem;line-height:.6;color:var(--accent);font-weight:800}
+  .rev p{color:var(--ink-2);font-size:.98rem;flex:1;line-height:1.7}
+  .rev .who{font-weight:800;font-size:.93rem;border-top:1px solid var(--line);padding-top:14px;display:flex;align-items:center;gap:12px}
+  .rev .who .av{width:38px;height:38px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-family:"JetBrains Mono",monospace;font-size:.78rem;font-weight:700;flex:none;text-transform:uppercase}
+  .rev .who span{display:block;font-weight:600;color:var(--muted);font-size:.79rem}
+
+  /* ---------- CTA band ---------- */
+  .cta-band{background:var(--hero-bg);color:var(--hero-ink);border-radius:20px;padding:44px 40px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;position:relative;overflow:hidden}
+  .cta-band::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+  .cta-band>*{position:relative}
+  .cta-band h2{font-size:clamp(1.5rem,3.4vw,2rem);margin-bottom:8px}
+  .cta-band p{color:var(--hero-muted);max-width:32rem}
+  @media (max-width:640px){.cta-band{padding:32px 24px}}
+
+  /* ---------- Contact ---------- */
+  #contact{padding-top:0}
+  .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:start}
+  @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+  .c-channels{display:grid;gap:12px}
+  .c-chan{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:17px 19px;text-decoration:none;box-shadow:var(--shadow-sm);transition:border-color .18s,box-shadow .18s,transform .18s}
+  a.c-chan:hover{border-color:var(--line-strong);box-shadow:var(--shadow);transform:translateY(-2px)}
+  .c-chan .ic{width:43px;height:43px;border-radius:10px;display:grid;place-items:center;flex:none;background:var(--accent-soft);color:var(--accent)}
+  .c-chan .ic.teal{background:var(--teal-soft);color:var(--teal)}
+  .c-chan .ic.amber{background:var(--amber-soft);color:var(--amber)}
+  .c-chan b{display:block;font-size:.98rem}
+  .c-chan span{font-size:.86rem;color:var(--muted);font-weight:600;word-break:break-all}
+  .c-chan .arr{margin-left:auto;color:var(--muted-2);flex:none}
+  form.contact{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm)}
+  form.contact h3{font-size:1.16rem;margin-bottom:5px}
+  form.contact>p{color:var(--muted);font-size:.93rem;margin-bottom:19px;line-height:1.6}
+  .f-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:600px){.f-grid{grid-template-columns:1fr}}
+  .field{display:grid;gap:6px}
+  .field.full{grid-column:1/-1}
+  .field label{font-size:.86rem;font-weight:700}
+  .field .err{font-size:.8rem;color:var(--accent);font-weight:700;display:none}
+  .field.invalid input,.field.invalid textarea{border-color:var(--accent)}
+  .field.invalid .err{display:block}
+  .form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:19px}
+  .form-ok{display:none;margin-top:15px;background:var(--teal-soft);color:var(--teal);font-weight:700;font-size:.9rem;border-radius:9px;padding:12px 15px}
+  .form-ok.show{display:block}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 40px;background:var(--bg-soft)}
+  .foot-in{display:flex;justify-content:space-between;gap:14px 20px;flex-wrap:wrap;align-items:center}
+  footer .fbrand{font-family:"Sora",sans-serif;font-weight:700;font-size:.98rem}
+  footer p{color:var(--muted);font-size:.87rem;font-weight:600;margin-top:3px}
+  footer .fl{display:flex;gap:18px;flex-wrap:wrap}
+  footer .fl a{font-size:.88rem;font-weight:700;text-decoration:none;color:var(--ink-2);transition:color .18s}
+  footer .fl a:hover{color:var(--accent)}
+
+  /* reveal animation — only when JS is on, so content is never hidden without it */
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .js .reveal.in{opacity:1;transform:none}
+  .hero-grid>*{min-width:0}
+  @media (max-width:560px){.codecard pre{font-size:.73rem;padding:15px 15px 6px}.codecard .foot{padding:10px 15px 13px}}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .js .reveal{opacity:1;transform:none}
+  }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="nav" id="siteNav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="dot">ZA</span><span>Zubair Alvi<small>Frontend Developer</small></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    <nav class="links" id="navLinks" aria-label="Main">
+      <a href="#about" data-nav="about">About</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#services" data-nav="services">Services</a>
+      <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#reviews" data-nav="reviews">Reviews</a>
+      <a href="#contact" class="cta">Hire Me</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="avail"><i></i> Available for freelance frontend work — worldwide, remote</span>
+          <h1>Zubair <span class="accent">Alvi</span></h1>
+          <p class="role">Frontend Developer · HTML / CSS / JavaScript</p>
+          <p class="lede">I build clean, responsive websites with HTML, CSS and JavaScript — and I run a <strong>Job Application Service</strong> that has submitted <strong>100,000+ job applications</strong> for clients around the world over the last 5 years.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-accent" href="#projects">View My Projects</a>
+            <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+          </div>
+          <div class="hero-meta">
+            <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Rahim Yar Khan, Punjab, Pakistan</span>
+            <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Zubairalvi8811@gmail.com</span>
+          </div>
+        </div>
+        <div class="codecard" aria-hidden="true">
+          <div class="bar"><i style="background:#e0655a"></i><i style="background:#e0b45a"></i><i style="background:#5aa873"></i><span class="f">zubair.js</span><span class="live">OPEN TO WORK</span></div>
+          <pre><span class="tk-k">const</span> <span class="tk-f">zubair</span> = {
+  role: <span class="tk-s">"Frontend Developer"</span>,
+  based: <span class="tk-s">"Rahim Yar Khan, PK"</span>,
+  skills: [<span class="tk-s">"HTML"</span>, <span class="tk-s">"CSS"</span>, <span class="tk-s">"JavaScript"</span>],
+  learning: <span class="tk-s">"React"</span>,
+  alsoRuns: <span class="tk-s">"Job Application Service"</span>,
+  applicationsSent: <span class="tk-p">100000</span> +,
+  openToWork: <span class="tk-k">true</span>
+};
+
+<span class="tk-c">// responsive by default,</span>
+<span class="tk-c">// honest about what I know</span>
+<span class="tk-f">zubair</span>.build(<span class="tk-s">"your website"</span>);</pre>
+          <div class="foot"><span>Experience <b>3 yrs frontend · 5 yrs service</b></span><span>Response <b>via WhatsApp &amp; email</b></span></div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stats-in">
+          <div class="stat"><div class="num"><span data-count="100000">0</span><em>+</em></div><div class="lbl">Job applications submitted for clients</div></div>
+          <div class="stat"><div class="num">5<em> yrs</em></div><div class="lbl">Running my Job Application Service</div></div>
+          <div class="stat"><div class="num">3<em> yrs</em></div><div class="lbl">Freelance frontend development</div></div>
+          <div class="stat"><div class="num">11</div><div class="lbl">Countries with clients, plus worldwide remote</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="sec-label">01 — About</p>
+        <h2>Developer by craft, job-application specialist by trade</h2>
+      </div>
+      <div class="about-grid">
+        <div class="body reveal">
+          <p>I'm Zubair Alvi, a frontend developer from Rahim Yar Khan, Punjab, Pakistan. For the past <strong>3 years</strong> I've built websites freelance with HTML, CSS and JavaScript — landing pages, forms with real validation, responsive navigation and small JavaScript apps.</p>
+          <p>Alongside development, I run a <strong>Job Application Service</strong> with 5 years of experience behind it. I apply to jobs on behalf of clients — LinkedIn Easy Apply, company websites and tailored-resume applications — and track every application in an organised spreadsheet, so clients always know exactly what was applied to, where, and when. That service has passed <strong>100,000 applications</strong>.</p>
+          <p>I'm straightforward about where I am: HTML, CSS and JavaScript are my working tools, I'm <strong>currently completing a web design course</strong> (certificate expected in the coming months), and I'm <strong>learning React</strong> next. What I promise clients is careful, responsive, tested work — and clear communication throughout.</p>
+        </div>
+        <aside class="factcard reveal">
+          <h3>Profile</h3>
+          <dl>
+            <div class="row"><dt>Location</dt><dd>Rahim Yar Khan, Punjab, Pakistan</dd></div>
+            <div class="row"><dt>Works with</dt><dd>Clients worldwide, remote</dd></div>
+            <div class="row"><dt>Frontend experience</dt><dd>3 years, freelance</dd></div>
+            <div class="row"><dt>Job Application Service</dt><dd>5 years · 100,000+ applications</dd></div>
+            <div class="row"><dt>Currently</dt><dd>Web design course (in progress)</dd></div>
+            <div class="row"><dt>Learning</dt><dd>React</dd></div>
+            <div class="row"><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/zubairalvi" target="_blank" rel="noopener">linkedin.com/in/zubairalvi</a></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="sec-label">02 — Skills</p>
+        <h2>What I work with — honestly labelled</h2>
+        <p>No inflated skill bars. This is what I use on real projects, what I'm actively building with, and what I'm learning right now.</p>
+      </div>
+      <div class="skill-cols">
+        <div class="skill-col reveal">
+          <span class="tag tag-core">Core — I build with these</span>
+          <h3>Frontend Foundations</h3>
+          <p>The tools behind every project on this page.</p>
+          <div class="chips">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Semantic HTML</span>
+            <span class="chip">Responsive Web Design</span><span class="chip">CSS Flexbox</span><span class="chip">CSS Grid</span>
+            <span class="chip">Web Forms</span><span class="chip">Mobile-first layouts</span>
+          </div>
+        </div>
+        <div class="skill-col reveal">
+          <span class="tag tag-build">Building — growing fast</span>
+          <h3>JavaScript in Practice</h3>
+          <p>Interactivity I write by hand, not copied from a template.</p>
+          <ul class="skill-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Form validation with inline error messages</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Add, delete and filter data in the DOM</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Mobile hamburger menus and toggles</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Animations, grids and interactive sections</li>
+          </ul>
+        </div>
+        <div class="skill-col reveal">
+          <span class="tag tag-learn">Learning — in progress</span>
+          <h3>Where I'm Headed</h3>
+          <p>Actively studying — not skills I claim as finished.</p>
+          <div class="chips">
+            <span class="chip">React</span><span class="chip">Web Design Course</span>
+          </div>
+          <p style="margin-top:14px">My web design course certificate is expected in the coming months, and React is the next step in my frontend path.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="sec-label">03 — Services</p>
+        <h2>What you can hire me for</h2>
+        <p>Two clear offers: frontend websites built by hand, and a job application service that has already submitted 100,000+ applications for clients.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc reveal">
+          <span class="num">/ 01</span>
+          <h3>Business &amp; Landing Websites</h3>
+          <p>A complete one-page or small business website that explains your offer clearly and turns visitors into enquiries.</p>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Hero, services and pricing sections</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Fully responsive — phone, tablet, desktop</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Contact buttons wired to WhatsApp &amp; email</li>
+          </ul>
+          <a class="go" href="#contact">Start a website project <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="svc reveal">
+          <span class="num">/ 02</span>
+          <h3>Forms &amp; Interactive Features</h3>
+          <p>The functional parts of a page — built with hand-written JavaScript, tested before delivery.</p>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Contact &amp; requirement forms with validation</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Mobile menus, filters and small JS apps</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Responsive fixes for existing pages</li>
+          </ul>
+          <a class="go" href="#demo">See the live demo <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="svc reveal">
+          <span class="num">/ 03</span>
+          <h3>Job Application Service</h3>
+          <p>I apply to jobs on your behalf and track everything in a shared spreadsheet, so you always know the status.</p>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> LinkedIn Easy Apply &amp; company websites</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Tailored-resume applications</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Organised Excel / Google Sheet tracker</li>
+          </ul>
+          <a class="go" href="#contact">Ask about the service <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div class="process reveal" aria-label="How I work">
+        <div class="step"><span class="n">STEP 01</span><h4>Discuss</h4><p>You tell me what you need on WhatsApp or email — the site, the feature, or the jobs you're targeting.</p></div>
+        <div class="step"><span class="n">STEP 02</span><h4>Plan</h4><p>I confirm the scope, the sections or requirements, and the timeline before any work starts.</p></div>
+        <div class="step"><span class="n">STEP 03</span><h4>Build &amp; Apply</h4><p>I build the page and test it on mobile and desktop — or start submitting your applications with tracking.</p></div>
+        <div class="step"><span class="n">STEP 04</span><h4>Review &amp; Deliver</h4><p>You review the result, I adjust what's needed, and you get the finished work plus clear updates.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="sec-label">04 — Projects</p>
+        <h2>Real projects, real work</h2>
+        <p>My main project is a live business website. The rest are the frontend builds I've completed to sharpen each skill — each one is described by what it actually does.</p>
+      </div>
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button class="active" data-filter="all">All projects</button>
+        <button data-filter="website">Websites</button>
+        <button data-filter="js">JavaScript Apps</button>
+        <button data-filter="ui">UI Components</button>
+      </div>
+
+      <article class="featured reveal" data-cat="website">
+        <div class="txt">
+          <span class="badge">Main Project — Live Business</span>
+          <h3>Job Application Service Website</h3>
+          <p>The website for my own business: a service that applies to jobs for clients worldwide. It presents the services and USDT pricing, collects client requirements through a detailed form, and shows clients exactly how their applications get tracked.</p>
+          <ul class="feat-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Services &amp; pricing sections — Easy Apply, company-website applications, tailored-resume applications</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Requirement form covering the 14 standard application questions, with resume upload (PDF / DOC / DOCX)</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Sample tracker preview — the same Excel / Google Sheet format every client receives</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Real client reviews, animations and responsive grid layouts</li>
+          </ul>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span><span>Forms</span></div>
+          <a class="btn btn-dark" href="#contact">Work with me on a project like this</a>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="browser">
+            <div class="bar"><i></i><i></i><i></i><span class="url">zubair-career-services — Job Application Service</span></div>
+            <div class="view">
+              <div class="mini-nav"><div class="mini-logo"></div><div class="mini-links"><i></i><i></i><i></i><i></i></div></div>
+              <div class="skl mini-h"></div><div class="skl mini-h2"></div>
+              <div class="skl mini-p"></div><div class="skl mini-p2"></div>
+              <div class="mini-btns"><div class="mini-btn"></div><div class="mini-btn ghost"></div></div>
+              <div class="mini-cards">
+                <div class="mini-card"><i></i><b></b><s></s></div>
+                <div class="mini-card"><i></i><b></b><s></s></div>
+                <div class="mini-card"><i></i><b></b><s></s></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="proj-grid">
+        <article class="proj reveal" data-cat="website">
+          <div class="top">
+            <span class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 20 20 4M14 4h6v6M9 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-3"/></svg></span>
+            <span class="kind">Website · Landing Page</span>
+          </div>
+          <h3>Job Application Service Landing Page</h3>
+          <p>A single-page marketing site for the service: one page that has to explain the offer, show the pricing, and turn a visitor into a WhatsApp enquiry.</p>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Hero section with a clear call to action</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Services and pricing laid out in CSS Grid cards</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Client reviews section and a mobile layout that stacks cleanly</li>
+          </ul>
+          <div class="tags"><span>HTML</span><span>CSS Grid</span><span>Flexbox</span><span>Responsive</span></div>
+        </article>
+
+        <article class="proj reveal" data-cat="js">
+          <div class="top">
+            <span class="ic teal"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 4v5"/></svg></span>
+            <span class="kind">JavaScript App</span>
+          </div>
+          <h3>Job Tracker App</h3>
+          <p>A small app for tracking job applications — the same problem my service solves for clients every day, built as interactive JavaScript.</p>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Add and delete applications</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Filter by status — Applied / Interview / Rejected</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Live counts per status</li>
+          </ul>
+          <p style="margin-bottom:16px"><a class="demo-link" href="#demo">Try the live demo below ↓</a></p>
+          <div class="tags"><span>JavaScript</span><span>DOM</span><span>CRUD</span><span>Filters</span></div>
+        </article>
+
+        <article class="proj reveal" data-cat="js ui">
+          <div class="top">
+            <span class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg></span>
+            <span class="kind">Form · Validation</span>
+          </div>
+          <h3>Contact Form with JavaScript Validation</h3>
+          <p>A contact form that checks itself before anything is sent — no empty submissions, no malformed emails slipping through.</p>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Required-field and email-format checks in JavaScript</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Inline error messages under each field</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> The contact form at the bottom of this page works the same way</li>
+          </ul>
+          <div class="tags"><span>JavaScript</span><span>Validation</span><span>Web Forms</span><span>UX</span></div>
+        </article>
+
+        <article class="proj reveal" data-cat="ui">
+          <div class="top">
+            <span class="ic amber"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>
+            <span class="kind">UI Component</span>
+          </div>
+          <h3>Responsive Navbar with Mobile Menu</h3>
+          <p>A navigation bar that adapts to the screen: full links on desktop, a hamburger menu on mobile — the same pattern running at the top of this page.</p>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Hamburger toggle with animated icon</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> CSS breakpoints for phone, tablet and desktop</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Resize this page or open it on your phone to see it work</li>
+          </ul>
+          <div class="tags"><span>CSS</span><span>Responsive</span><span>JavaScript Toggle</span></div>
+        </article>
+
+        <article class="proj reveal" data-cat="website">
+          <div class="top">
+            <span class="ic teal"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span>
+            <span class="kind">Website — This Page</span>
+          </div>
+          <h3>One-Page Portfolio Website</h3>
+          <p>This portfolio itself: a single-page site with a working mobile menu, project filtering, an interactive demo and a validated contact form.</p>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Light and dark mode that follows your system setting</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Semantic HTML structure with clear sections</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg> Everything on it works — try the controls yourself</li>
+          </ul>
+          <div class="tags"><span>HTML</span><span>CSS Grid</span><span>Flexbox</span><span>JavaScript</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE DEMO -->
+  <section id="demo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="sec-label">05 — Live Demo</p>
+        <h2>Don't take my word for it — try the JavaScript</h2>
+        <p>A working miniature of my Job Tracker App, running right here. Add an application, filter by status, delete entries.</p>
+      </div>
+      <div class="demo-card reveal">
+        <div class="demo-head">
+          <h3>Job Tracker — mini demo</h3>
+          <p>Sample entries are shown so you can test the filters straight away. Add your own with the form.</p>
+        </div>
+        <div class="demo-body">
+          <form class="demo-form" id="demoForm" novalidate>
+            <input type="text" id="djTitle" placeholder="Job title — e.g. Frontend Developer" aria-label="Job title" />
+            <input type="text" id="djCompany" placeholder="Company" aria-label="Company" />
+            <button class="btn btn-accent" type="submit" style="justify-content:center">Add Job</button>
+          </form>
+          <div class="demo-filters" role="group" aria-label="Filter demo jobs by status">
+            <button class="active" data-dfilter="all">All</button>
+            <button data-dfilter="Applied">Applied</button>
+            <button data-dfilter="Interview">Interview</button>
+            <button data-dfilter="Rejected">Rejected</button>
+            <span class="count" id="demoCount"></span>
+          </div>
+          <div class="job-rows" id="jobRows"></div>
+          <p class="demo-note">Demo only — entries live in this page while it's open and reset when you reload. New entries start as “Applied”; use the status dropdown on any row to move them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="sec-label">06 — Experience</p>
+        <h2>Experience &amp; training</h2>
+      </div>
+      <div class="timeline">
+        <div class="t-item reveal">
+          <div class="t-when">5 YEARS</div>
+          <div>
+            <h3>Founder &amp; Operator — Job Application Service</h3>
+            <p class="org">Zubair Career Services · Remote, worldwide</p>
+            <p>I apply to jobs on behalf of clients — LinkedIn Easy Apply, company career pages and tailored-resume applications matched to each client's profile. Every client receives an organised Excel / Google Sheet tracker with job title, company, link, status, date and salary details. Total applications submitted: 100,000+.</p>
+            <div class="countries">
+              <span>United States</span><span>United Kingdom</span><span>Canada</span><span>Australia</span><span>Germany</span><span>Netherlands</span><span>Ireland</span><span>United Arab Emirates</span><span>Saudi Arabia</span><span>India</span><span>Pakistan</span><span>Worldwide Remote</span>
+            </div>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-when">NOV 2023 — PRESENT</div>
+          <div>
+            <h3>Freelance Frontend Developer</h3>
+            <p class="org">Self-employed · 3 years</p>
+            <p>Building websites with HTML, CSS and JavaScript: business landing pages, validated contact forms, responsive navigation and small interactive apps. My main project is my own Job Application Service website, built and maintained by me.</p>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-when">IN PROGRESS</div>
+          <div>
+            <h3>Web Design Course</h3>
+            <p class="org">Training · Certificate expected in the coming months</p>
+            <p>Formal training in web design, running alongside my freelance work — and the reason this portfolio labels my skills honestly: strong foundations in use every day, with React next on the path.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="sec-label">07 — Client Reviews</p>
+        <h2>What clients say about working with Zubair</h2>
+        <p>Real reviews from clients of my Job Application Service.</p>
+      </div>
+      <div class="rev-grid">
+        <div class="rev reveal">
+          <span class="q" aria-hidden="true">“</span>
+          <p>Zubair did a great job and did even more than what was in the job listing for me. He created an organized spreadsheet for the work that I can use to keep track of my jobs as well. Would highly recommend.</p>
+          <div class="who"><span class="av" aria-hidden="true">K</span><span style="border:none;padding:0">kaveh_m<span>Job Application Service client</span></span></div>
+        </div>
+        <div class="rev reveal">
+          <span class="q" aria-hidden="true">“</span>
+          <p>Great work! He was professional, organized, and applied to the jobs according to my profile and requirements. Communication was clear, and he kept me updated throughout the process. I highly recommend his services.</p>
+          <div class="who"><span class="av" aria-hidden="true">R</span><span style="border:none;padding:0">rodrigogomes747<span>Job Application Service client</span></span></div>
+        </div>
+        <div class="rev reveal">
+          <span class="q" aria-hidden="true">“</span>
+          <p>Great service would definitely work with again!</p>
+          <div class="who"><span class="av" aria-hidden="true">A</span><span style="border:none;padding:0">ariansalari<span>Job Application Service client</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA + CONTACT -->
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta-band reveal" style="margin-bottom:56px">
+        <div>
+          <h2>Have a project in mind?</h2>
+          <p>Tell me what you're building — or which jobs you're targeting — and I'll reply with a clear plan and timeline.</p>
+        </div>
+        <a class="btn btn-accent" href="https://wa.me/923136105044" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+
+      <div class="sec-head reveal">
+        <p class="sec-label">08 — Contact</p>
+        <h2>Let's build something — or get your applications moving</h2>
+        <p>Need a website, or want the Job Application Service working on your job search? Message me on WhatsApp, email, or LinkedIn — or use the form and it will open WhatsApp with your message ready to send.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="c-channels reveal">
+          <a class="c-chan" href="https://wa.me/923136105044" target="_blank" rel="noopener">
+            <span class="ic teal"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.1.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.3.3.1.5.1.6-.1l1-1.2c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2Z"/></svg></span>
+            <span><b>WhatsApp</b><span>+92 313 6105044 — fastest reply</span></span>
+            <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="c-chan" href="mailto:Zubairalvi8811@gmail.com">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <span><b>Email</b><span>Zubairalvi8811@gmail.com</span></span>
+            <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="c-chan" href="https://www.linkedin.com/in/zubairalvi" target="_blank" rel="noopener">
+            <span class="ic amber"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.2 8h4.6v14H.2V8Zm7.6 0h4.4v1.9h.1c.6-1.2 2.1-2.4 4.4-2.4 4.7 0 5.6 3.1 5.6 7.1V22h-4.6v-6.5c0-1.6 0-3.6-2.2-3.6s-2.6 1.7-2.6 3.5V22H7.8V8Z"/></svg></span>
+            <span><b>LinkedIn</b><span>linkedin.com/in/zubairalvi</span></span>
+            <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <div class="c-chan" style="cursor:default">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span><b>Based in</b><span>Rahim Yar Khan, Punjab, Pakistan — working remotely, worldwide</span></span>
+          </div>
+        </div>
+
+        <form class="contact reveal" id="contactForm" novalidate>
+          <h3>Send me a message</h3>
+          <p>The form validates your details, then opens WhatsApp with the message pre-filled — just press send there. Attach your resume in the chat if it's about the Job Application Service.</p>
+          <div class="f-grid">
+            <div class="field" id="f-name">
+              <label for="cName">Your name *</label>
+              <input id="cName" type="text" autocomplete="name" placeholder="e.g. Ahmed Khan" />
+              <span class="err">Please enter your name.</span>
+            </div>
+            <div class="field" id="f-email">
+              <label for="cEmail">Your email *</label>
+              <input id="cEmail" type="email" autocomplete="email" placeholder="you@example.com" />
+              <span class="err">Please enter a valid email address.</span>
+            </div>
+            <div class="field full" id="f-topic">
+              <label for="cTopic">I'm contacting you about</label>
+              <select id="cTopic">
+                <option>A website / frontend project</option>
+                <option>The Job Application Service</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field full" id="f-msg">
+              <label for="cMsg">Message *</label>
+              <textarea id="cMsg" rows="4" placeholder="Tell me what you need — the role you're targeting, or the website you have in mind."></textarea>
+              <span class="err">Please write a message (at least 10 characters).</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-accent">Open in WhatsApp</button>
+            <button type="button" class="btn btn-outline" id="emailBtn">Send via Email instead</button>
+          </div>
+          <p class="form-ok" id="formOk">Looks good — WhatsApp should now be open with your message ready. Just press send there.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>
+      <div class="fbrand">Zubair Alvi</div>
+      <p>© <span id="year"></span> Zubair Alvi — Frontend Developer · Rahim Yar Khan, Punjab, Pakistan</p>
+    </div>
+    <div class="fl">
+      <a href="https://www.linkedin.com/in/zubairalvi" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/923136105044" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:Zubairalvi8811@gmail.com">Email</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* --- Sticky nav shadow --- */
+  var header = document.getElementById('siteNav');
+  function onScroll(){ header.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* --- Mobile nav (hamburger) --- */
+  var burger = document.getElementById('burger');
+  var navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  navLinks.addEventListener('click', function(e){
+    if (e.target.tagName === 'A'){ navLinks.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+  });
+
+  /* --- Active section in nav --- */
+  var navAnchors = document.querySelectorAll('nav.links a[data-nav]');
+  if ('IntersectionObserver' in window && navAnchors.length) {
+    var secIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) {
+          navAnchors.forEach(function(a){ a.classList.toggle('active', a.getAttribute('data-nav') === en.target.id); });
+        }
+      });
+    }, {rootMargin:'-38% 0px -55% 0px'});
+    ['about','skills','services','projects','experience','reviews'].forEach(function(id){
+      var s = document.getElementById(id);
+      if (s) secIO.observe(s);
+    });
+  }
+
+  /* --- Scroll reveal --- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if (reduced || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.1, rootMargin:'0px 0px -30px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  /* --- Animated counter (hero 100,000+) --- */
+  var counters = document.querySelectorAll('[data-count]');
+  function runCounter(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    if (reduced) { el.textContent = target.toLocaleString('en-US'); return; }
+    var start = null, dur = 1500;
+    function step(ts){
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString('en-US');
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window && counters.length) {
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ runCounter(en.target); cio.unobserve(en.target); } });
+    }, {threshold:.4});
+    counters.forEach(function(el){ cio.observe(el); });
+  } else { counters.forEach(runCounter); }
+
+  /* --- Project filter --- */
+  var filterBtns = document.querySelectorAll('.filters button');
+  var projects = document.querySelectorAll('[data-cat]');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      projects.forEach(function(p){
+        var cats = p.getAttribute('data-cat').split(' ');
+        p.classList.toggle('hide', f !== 'all' && cats.indexOf(f) === -1);
+      });
+    });
+  });
+
+  /* --- Job Tracker demo --- */
+  var jobs = [
+    {title:'Frontend Developer', company:'Sample — Tech Studio', status:'Applied'},
+    {title:'Web Designer', company:'Sample — Creative Agency', status:'Interview'},
+    {title:'UI Developer', company:'Sample — Software House', status:'Applied'},
+    {title:'Junior Frontend Developer', company:'Sample — Startup', status:'Rejected'}
+  ];
+  var demoFilter = 'all';
+  var rowsEl = document.getElementById('jobRows');
+  var countEl = document.getElementById('demoCount');
+  var statuses = ['Applied','Interview','Rejected'];
+
+  function renderJobs(){
+    rowsEl.innerHTML = '';
+    var shown = jobs.filter(function(j){ return demoFilter === 'all' || j.status === demoFilter; });
+    countEl.textContent = shown.length + ' of ' + jobs.length + ' shown';
+    if (!shown.length) {
+      var empty = document.createElement('div');
+      empty.className = 'empty';
+      empty.textContent = 'No applications with this status yet — add one above.';
+      rowsEl.appendChild(empty);
+      return;
+    }
+    shown.forEach(function(j){
+      var idx = jobs.indexOf(j);
+      var row = document.createElement('div');
+      row.className = 'job-row';
+      var main = document.createElement('div');
+      main.className = 'jt';
+      var b = document.createElement('b'); b.textContent = j.title;
+      var s = document.createElement('span'); s.textContent = j.company;
+      main.appendChild(b); main.appendChild(s);
+      var sel = document.createElement('select');
+      sel.setAttribute('aria-label', 'Status for ' + j.title);
+      sel.style.cssText = 'font-family:inherit;font-size:.82rem;font-weight:700;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);flex:none';
+      statuses.forEach(function(st){
+        var o = document.createElement('option'); o.value = st; o.textContent = st;
+        if (st === j.status) o.selected = true;
+        sel.appendChild(o);
+      });
+      sel.addEventListener('change', function(){ jobs[idx].status = sel.value; renderJobs(); });
+      var pill = document.createElement('span');
+      pill.className = 'pill ' + j.status.toLowerCase();
+      pill.textContent = j.status;
+      var del = document.createElement('button');
+      del.className = 'del'; del.type = 'button'; del.textContent = '×';
+      del.setAttribute('aria-label', 'Delete ' + j.title);
+      del.addEventListener('click', function(){ jobs.splice(idx, 1); renderJobs(); });
+      row.appendChild(main); row.appendChild(sel); row.appendChild(pill); row.appendChild(del);
+      rowsEl.appendChild(row);
+    });
+  }
+  renderJobs();
+
+  document.querySelectorAll('[data-dfilter]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('[data-dfilter]').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      demoFilter = btn.getAttribute('data-dfilter');
+      renderJobs();
+    });
+  });
+
+  document.getElementById('demoForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var t = document.getElementById('djTitle');
+    var c = document.getElementById('djCompany');
+    var title = t.value.trim(), company = c.value.trim();
+    if (!title) { t.focus(); t.style.borderColor = 'var(--accent)'; return; }
+    t.style.borderColor = '';
+    jobs.unshift({title: title, company: company || '—', status: 'Applied'});
+    demoFilter = 'all';
+    document.querySelectorAll('[data-dfilter]').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-dfilter') === 'all'); });
+    t.value = ''; c.value = '';
+    renderJobs();
+  });
+
+  /* --- Contact form validation -> WhatsApp / Email --- */
+  var form = document.getElementById('contactForm');
+  function validate(){
+    var ok = true;
+    var name = document.getElementById('cName').value.trim();
+    var email = document.getElementById('cEmail').value.trim();
+    var msg = document.getElementById('cMsg').value.trim();
+    function mark(id, valid){ document.getElementById(id).classList.toggle('invalid', !valid); if (!valid) ok = false; }
+    mark('f-name', name.length >= 2);
+    mark('f-email', /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email));
+    mark('f-msg', msg.length >= 10);
+    return ok ? {name: name, email: email, msg: msg, topic: document.getElementById('cTopic').value} : null;
+  }
+  ['cName','cEmail','cMsg'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', function(){
+      this.closest('.field').classList.remove('invalid');
+    });
+  });
+  function buildText(d){
+    return 'Hi Zubair, my name is ' + d.name + '.\n\nTopic: ' + d.topic + '\n\n' + d.msg + '\n\n(You can reach me at ' + d.email + ')';
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var d = validate();
+    if (!d) return;
+    document.getElementById('formOk').classList.add('show');
+    window.open('https://wa.me/923136105044?text=' + encodeURIComponent(buildText(d)), '_blank');
+  });
+  document.getElementById('emailBtn').addEventListener('click', function(){
+    var d = validate();
+    if (!d) return;
+    window.location.href = 'mailto:Zubairalvi8811@gmail.com?subject=' + encodeURIComponent('Portfolio enquiry — ' + d.topic) + '&body=' + encodeURIComponent(buildText(d));
+  });
+})();
+</script>
+</body>
+</html>
